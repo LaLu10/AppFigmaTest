@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register"
+    app:startDestination="@id/initFragment">
+
+    <fragment
+        android:id="@+id/initFragment"
+        android:name="com.example.appfigmatest.InitFragment"
+        android:label="fragment_init"
+        tools:layout="@layout/fragment_init" >
+        <action
+            android:id="@+id/action_initFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.appfigmatest.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_sesionFragment"
+            app:destination="@id/sesionFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_finalFragment"
+            app:destination="@id/finalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sesionFragment"
+        android:name="com.example.appfigmatest.SesionFragment"
+        android:label="fragment_sesion"
+        tools:layout="@layout/fragment_sesion" />
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.example.appfigmatest.FinalFragment"
+        android:label="fragment_final"
+        tools:layout="@layout/fragment_final" />
+</navigation>
